@@ -1,0 +1,16 @@
+{
+  "name": "md-to-json",
+  "version": "0.0.1",
+  "description": "markdown to json parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "v4xyz@126.com",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "marked": "^1.1.0",
+    "yaml-front-matter": "^4.1.0"
+  }
+}
