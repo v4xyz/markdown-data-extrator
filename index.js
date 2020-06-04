@@ -13,7 +13,6 @@ function getTableData (table) {
   const bodys =  $(table).find('tbody tr').map((i, node) => node).get()
   	.map(tr => $(tr).find('td').map((i, node) => $(node).text()).get())
 
-
   // return $(table).find('thead tr').children()
   return bodys.map(item => {
 
@@ -26,12 +25,18 @@ function getTableData (table) {
   })
 }  
 
-fs.readFile('./test01.md', (err, data) => {
-	
-	const htmlContent = marked(data.toString())
-	console.log(htmlContent)
-	const tables = $.load(htmlContent)('table')
-	console.log(getTableData(tables[0]))
+function markdownToJson (mdContent) {
 
-})
+  const htmlContent = marked(mdContent)
+  // console.log(htmlContent)
+  const tables = $.load(htmlContent)('table')
+  console.log(tables.length)
 
+  // return getTableData(tables[0])
+  return Array.prototype.map.call(tables, table => {
+
+    return getTableData(table)
+  }) 
+}
+
+module.exports = markdownToJson
