@@ -6,11 +6,20 @@
   "scripts": {
     "test": "node test"
   },
-  "author": "v4xyz@126.com",
-  "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "marked": "^1.1.0",
-    "yaml-front-matter": "^4.1.0"
-  }
+    "marked": "^1.1.0"
+  },
+  "keywords": [
+    "markdown to json",
+    "markdown转换",
+    "markdown ",
+    "页面逻辑控制"
+  ],
+  "author": "v4xyz@126.com",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/v4xyz/md-to-json/issues"
+  },
+  "homepage": "https://github.com/v4xyz/md-to-json#readme"
 }
