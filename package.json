@@ -1,5 +1,5 @@
 {
-  "name": "md-to-json",
+  "name": "markdown-data-extrator",
   "version": "0.0.1",
   "description": "markdown to json parser",
   "main": "index.js",
@@ -19,7 +19,7 @@
   "author": "v4xyz@126.com",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/v4xyz/md-to-json/issues"
+    "url": "https://github.com/v4xyz/markdown-data-extrator/issues"
   },
-  "homepage": "https://github.com/v4xyz/md-to-json#readme"
+  "homepage": "https://github.com/v4xyz/markdown-data-extrator#readme"
 }
