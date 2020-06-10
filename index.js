@@ -32,13 +32,20 @@ function markdownToJson (mdContent) {
   const htmlContent = marked(mdContent)
   // console.log(htmlContent)
   const tables = $.load(htmlContent)('table')
-  console.log(tables.length)
-
+  // console.log(tables.length)
   // return getTableData(tables[0])
-  return Array.prototype.map.call(tables, table => {
-
-    return getTableData(table)
-  }) 
+  
+  // 以数组方式返回[处理结果, 转化出的html文本, $, 原始markdown内容] 
+  // 方便二次处理
+  return [
+    Array.prototype.map.call(tables, table => {
+  
+        return getTableData(table)
+    }),
+    htmlContent,
+    $,
+    mdContent,
+  ]
 }
 
 module.exports = markdownToJson

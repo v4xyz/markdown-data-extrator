@@ -9,6 +9,6 @@ fs.readFile(path.resolve(__dirname, 'fixtures', 'test01.md'), (err, data) => {
 		return 
 	}
 
-	console.log(mdToJSON(data.toString()))
+	console.log(mdToJSON(data.toString())[0])
 
 })
