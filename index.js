@@ -17,9 +17,11 @@ function getTableData (table) {
   return bodys.map(item => {
 
   	return headers.reduce((acc, field, index) => {
+      const fieldValue = item[index]
 
+      // 数字内容字符串使用Number函数转为数字
   		return {...acc,
-  			[field]: item[index]
+  			[field]: (/^[\-\d]\d*\.?\d*$/).test(fieldValue) ? Number(fieldValue) : fieldValue
   		}
   	}, {})
   })
